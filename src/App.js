@@ -4,7 +4,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/message")  // Пока локально
+    fetch("https://firstprojectbackend-oyfq.onrender.com/api/message")  // Пока локально
       .then(res => res.json())
       .then(data => setMessage(data.message))
       .catch(err => console.error("Ошибка:", err));
