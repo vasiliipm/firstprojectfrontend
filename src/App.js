@@ -8,7 +8,7 @@ function App() {
 
   const generatePassword = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/generate-password', {
+      const response = await fetch('https://firstprojectbackend-oyfq.onrender.com/api/generate-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
