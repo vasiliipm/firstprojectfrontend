@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f2f5f9;
+    }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    label {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 8px;
+    }
 
-.App-link {
-  color: #61dafb;
-}
+    input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 80px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      margin-right: 2px;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #4F46E5;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #4338ca;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    #copySuccess {
+      color: green;
+      margin-top: 10px;
+      font-size: 14px;
+      display: 'Copied';
+    }
+
+    #strength-bar {
+      height: 8px;
+      width: 100%;
+      border-radius: 4px;
+      background: #ddd;
+      margin-top: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #strength-fill {
+      height: 100%;
+      width: 0%;
+      background: limegreen;
+      transition: width 0.3s, background 0.3s;
+    }
